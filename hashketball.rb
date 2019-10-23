@@ -233,7 +233,7 @@ def player_with_longest_name
   playera = nil
   game_hash.each do |place, team|
     team[:players].each do |player|
-        if player[:player_name].length > points
+        if player[:player_name].to_s.length > points
           points = player[:player_name]
           playera = player[:player_name]
         end
