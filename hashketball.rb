@@ -217,24 +217,25 @@ def winning_team
 
       team[:players].each do |player|
             homepoints = homepoints +player[:points]
-binding.pry
+
         end
 
     end
+  end
     if awaypoints > homepoints
       return game_hash[:away][:team_name]
     elsif homepoints > awaypoints
       return game_hash[:home][:team_name]
     end
-end
+
 end
 def player_with_longest_name
   points = 0
   playera = nil
   game_hash.each do |place, team|
     team[:players].each do |player|
-        if player[:player_name].to_s.length > points
-          points = player[:player_name]
+        if player[:player_name].length > points
+          points = player[:player_name].length
           playera = player[:player_name]
         end
       end
