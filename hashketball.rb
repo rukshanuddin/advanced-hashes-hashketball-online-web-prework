@@ -243,6 +243,7 @@ def player_with_longest_name
 
   playera
 end
+
 def long_name_steals_a_ton
   steals = 0
   playera = nil
@@ -254,9 +255,9 @@ def long_name_steals_a_ton
         end
       end
     end
-
+end
   if playera == player_with_longest_name
     return true
-  else
-    return false
+  end
+end
 end
